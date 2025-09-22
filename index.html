@@ -40,6 +40,9 @@
             border: 2px solid #7B3FF2;
             transform: scale(1.05);
         }
+        .scroller-container:hover .animate-scroll {
+            animation-play-state: paused;
+        }
         /* Preloader Styles */
         #preloader {
             position: fixed;
@@ -69,6 +72,14 @@
         @keyframes fadeInOut {
             0%, 100% { opacity: 0; }
             50% { opacity: 1; }
+        }
+        @keyframes scroll {
+            to {
+                transform: translate(calc(-50% - 4rem)); /* 4rem is half the x-spacing */
+            }
+        }
+        .animate-scroll {
+            animation: scroll 60s linear infinite;
         }
     </style>
 </head>
@@ -253,14 +264,27 @@
                     </div>
                 </div>
                 
-                <div class="w-full overflow-x-auto scroll-gallery my-12 anim-child">
-                    <div class="flex space-x-4 p-4 w-max">
-                        <img src="https://placehold.co/400x300/1F2937/F9FAFB?text=Event+1" class="rounded-lg h-48 md:h-64 object-cover" alt="Event photo 1">
-                        <img src="https://placehold.co/400x300/4B5563/F9FAFB?text=Event+2" class="rounded-lg h-48 md:h-64 object-cover" alt="Event photo 2">
-                        <img src="https://placehold.co/400x300/7B3FF2/F9FAFB?text=Event+3" class="rounded-lg h-48 md:h-64 object-cover" alt="Event photo 3">
-                        <img src="https://placehold.co/400x300/10B981/F9FAFB?text=Event+4" class="rounded-lg h-48 md:h-64 object-cover" alt="Event photo 4">
-                        <img src="https://placehold.co/400x300/EF4444/F9FAFB?text=Event+5" class="rounded-lg h-48 md:h-64 object-cover" alt="Event photo 5">
-                        <img src="https://placehold.co/400x300/1F2937/F9FAFB?text=Event+6" class="rounded-lg h-48 md:h-64 object-cover" alt="Event photo 6">
+                <!-- Auto-scrolling logo strip -->
+                <div class="scroller-container w-full overflow-hidden my-12 anim-child [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)]">
+                    <div class="flex items-center space-x-16 w-max animate-scroll">
+                        <!-- Logos are duplicated for a seamless loop -->
+                        <img src="cftaf.webp" class="h-20 max-w-none grayscale hover:grayscale-0 transition-all duration-300" alt="Cathedral Park Jazz Festival logo">
+                        <img src="hood-jazz.webp" class="h-20 max-w-none grayscale hover:grayscale-0 transition-all duration-300" alt="Hood River Jazz Festival logo">
+                        <img src="molalla.webp" class="h-20 max-w-none grayscale hover:grayscale-0 transition-all duration-300" alt="Molalla Buckeroo logo">
+                        <img src="new-vibe.webp" class="h-20 max-w-none grayscale hover:grayscale-0 transition-all duration-300" alt="New Vibe logo">
+                        <img src="orbrews.webp" class="h-20 max-w-none grayscale hover:grayscale-0 transition-all duration-300" alt="Oregon Brewers Festival logo">
+                        <img src="src.webp" class="h-20 max-w-none grayscale hover:grayscale-0 transition-all duration-300" alt="Sandy River Center logo">
+                        <img src="stokes.webp" class="h-20 max-w-none grayscale hover:grayscale-0 transition-all duration-300" alt="Stokes Hodges logo">
+                        <img src="troutdale.webp" class="h-20 max-w-none grayscale hover:grayscale-0 transition-all duration-300" alt="City of Troutdale logo">
+                        <!-- Duplicates -->
+                        <img src="cftaf.webp" class="h-20 max-w-none grayscale hover:grayscale-0 transition-all duration-300" aria-hidden="true" alt="Cathedral Park Jazz Festival logo">
+                        <img src="hood-jazz.webp" class="h-20 max-w-none grayscale hover:grayscale-0 transition-all duration-300" aria-hidden="true" alt="Hood River Jazz Festival logo">
+                        <img src="molalla.webp" class="h-20 max-w-none grayscale hover:grayscale-0 transition-all duration-300" aria-hidden="true" alt="Molalla Buckeroo logo">
+                        <img src="new-vibe.webp" class="h-20 max-w-none grayscale hover:grayscale-0 transition-all duration-300" aria-hidden="true" alt="New Vibe logo">
+                        <img src="orbrews.webp" class="h-20 max-w-none grayscale hover:grayscale-0 transition-all duration-300" aria-hidden="true" alt="Oregon Brewers Festival logo">
+                        <img src="src.webp" class="h-20 max-w-none grayscale hover:grayscale-0 transition-all duration-300" aria-hidden="true" alt="Sandy River Center logo">
+                        <img src="stokes.webp" class="h-20 max-w-none grayscale hover:grayscale-0 transition-all duration-300" aria-hidden="true" alt="Stokes Hodges logo">
+                        <img src="troutdale.webp" class="h-20 max-w-none grayscale hover:grayscale-0 transition-all duration-300" aria-hidden="true" alt="City of Troutdale logo">
                     </div>
                 </div>
 
@@ -516,6 +540,9 @@
     </script>
 </body>
 </html>
+
+
+
 
 
 
