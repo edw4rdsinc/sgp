@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Soundguy Productions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        body {
+            background-color: #F9FAFB; /* Default light background */
+            color: #1F2937;
+            font-family: 'Roboto', sans-serif;
+            opacity: 0; /* Initially hide body */
+            transition: opacity 0.5s ease-in;
+        }
+        body.loaded {
+            opacity: 1;
+        }
+        .font-bebas {
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 0.05em;
+        }
+        .nav-scrolled {
+            background-color: rgba(31, 41, 55, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #4B5563;
+        }
+        /* Preloader Styles */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #1F2937;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.75s ease, visibility 0.75s ease;
+        }
+        #preloader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .loader-text {
+            color: #F9FAFB;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            letter-spacing: 0.2em;
+            opacity: 0;
+            animation: fadeInOut 2.5s infinite;
+        }
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+        .hero-bg-about {
+            background-image: url('https://placehold.co/1920x1080/1F2937/4B5563?text=Concert+Collage');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-text">SOUNDGUY PRODUCTIONS</div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 nav-scrolled">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bebas tracking-wider text-white">SOUNDGUY PRODUCTIONS</a>
+            <div class="hidden md:flex items-center space-x-8 text-white">
+                <a href="index.html" class="hover:text-[#7B3FF2] transition-colors duration-300">HOME</a>
+                <a href="services.html" class="hover:text-[#7B3FF2] transition-colors duration-300">SERVICES</a>
+                <a href="about.html" class="text-[#7B3FF2] font-bold">ABOUT</a>
+                <a href="#contact" class="hover:text-[#7B3FF2] transition-colors duration-300">CONTACT</a>
+                <a href="#contact" class="bg-[#7B3FF2] text-white px-6 py-2 rounded-md hover:bg-opacity-80 transition-all duration-300 transform hover:scale-105">Request Quote</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 bg-opacity-95 text-white">
+            <a href="index.html" class="block text-center py-4 hover:bg-[#7B3FF2]">HOME</a>
+            <a href="services.html" class="block text-center py-4 hover:bg-[#7B3FF2]">SERVICES</a>
+            <a href="about.html" class="block text-center py-4 bg-gray-700 text-[#7B3FF2] font-bold">ABOUT</a>
+            <a href="#contact" class="block text-center py-4 hover:bg-[#7B3FF2]">CONTACT</a>
+            <a href="#contact" class="block text-center py-4 bg-[#7B3FF2] font-bold">REQUEST QUOTE</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg-about text-white pt-32 pb-20 relative">
+            <div class="absolute inset-0 bg-gray-900 bg-opacity-80"></div>
+            <div class="container mx-auto px-6 text-center relative z-10">
+                <h1 class="text-5xl md:text-7xl font-bebas mb-4 hero-anim">MAKING PORTLAND METRO EVENTS SOUND AMAZING SINCE 2004</h1>
+                <p class="text-lg md:text-xl text-purple-200 hero-anim">Professional sound from someone who gets it</p>
+            </div>
+        </section>
+
+        <!-- The Story Section -->
+        <section class="py-20 md:py-28 bg-white section-anim">
+            <div class="container mx-auto px-6">
+                <div class="grid lg:grid-cols-3 gap-12 items-start">
+                    <div class="lg:col-span-2 space-y-6 text-lg text-gray-700 leading-relaxed anim-child">
+                        <h2 class="text-4xl md:text-5xl font-bebas text-gray-800 mb-6">FROM PERFORMER TO PRODUCER</h2>
+                        <p>Every sound engineer has a story. Mine starts on stage.</p>
+                        <p>I spent years as a musician, chasing that perfect moment when everything clicks – the crowd connects, the band locks in, and you feel larger than life. I know what it's like to step on stage hoping the sound tech understands your vision. I know the frustration when they don't.</p>
+                        <p>That experience drives everything we do at Soundguy Productions. When I started this company 20 years ago, I made a simple promise: every performer deserves to feel like a rockstar, and every audience deserves to hear them clearly.</p>
+                        <p>Today, we're the trusted sound partner for venues, festivals, and events across Portland Metro. From intimate coffee shop sets to 2,500-person summer concerts, we bring the same dedication to making everyone sound their best.</p>
+                        <p>It's not just about the equipment (though we use the best). It's about understanding what artists need to feel confident, what venues need to run smoothly, and what audiences deserve to experience.</p>
+                        <p class="font-bold">After 20 years, this isn't just my job – it's my passion.</p>
+                        <p class="text-2xl font-bebas text-[#7B3FF2]">- Rich, Founder</p>
+                    </div>
+                    <aside class="space-y-8 anim-child">
+                        <img src="https://placehold.co/600x400/7B3FF2/FFFFFF?text=Rich+at+Console" alt="Rich, the founder, at a sound console" class="rounded-lg shadow-xl w-full">
+                        <blockquote class="border-l-4 border-[#7B3FF2] p-6 bg-gray-50 text-gray-600 italic">
+                            "I became a sound engineer because I wanted every performer to feel what I felt on stage – that magical moment when everything sounds perfect."
+                        </blockquote>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Philosophy Section -->
+        <section class="py-20 md:py-28 bg-gray-50 section-anim">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-5xl font-bebas mb-4 anim-child">SOUND WITHOUT THE DRAMA</h2>
+                <p class="max-w-3xl mx-auto text-gray-600 mb-12 anim-child">The industry has a reputation problem. Everyone's worked with that grumpy sound engineer who treats performers like inconveniences and venues like battlegrounds. That's not us.</p>
+                <div class="grid md:grid-cols-3 gap-12">
+                    <div class="space-y-4 anim-child">
+                        <div class="flex justify-center items-center h-20 w-20 mx-auto bg-purple-100 rounded-full">
+                            <svg class="w-10 h-10 text-[#7B3FF2]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-bebas">PROFESSIONAL ≠ DIFFICULT</h3>
+                        <p class="text-gray-600">We prove that you can be serious about quality without being hard to work with. Clear communication and collaborative problem-solving are standard.</p>
+                    </div>
+                    <div class="space-y-4 anim-child">
+                        <div class="flex justify-center items-center h-20 w-20 mx-auto bg-purple-100 rounded-full">
+                           <svg class="w-10 h-10 text-[#7B3FF2]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-bebas">EVERY EVENT MATTERS</h3>
+                        <p class="text-gray-600">Whether it's a 50-person coffee shop or a 2,500-person festival, your event gets our full attention. No job is too small for excellence.</p>
+                    </div>
+                    <div class="space-y-4 anim-child">
+                        <div class="flex justify-center items-center h-20 w-20 mx-auto bg-purple-100 rounded-full">
+                            <svg class="w-10 h-10 text-[#7B3FF2]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" /></svg>
+                        </div>
+                        <h3 class="text-2xl font-bebas">CALM CONFIDENCE</h3>
+                        <p class="text-gray-600">Two decades of experience means we've seen it all. Weather, equipment failures, last-minute changes – we adapt and deliver without the panic.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Experience Stats Section -->
+        <section class="bg-gray-800 bg-gradient-to-br from-[#1F2937] to-[#4c2d82] text-white py-20 md:py-28 section-anim">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-5xl font-bebas mb-12 anim-child">TWO DECADES OF GETTING IT RIGHT</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 max-w-4xl mx-auto">
+                    <div class="text-center anim-child">
+                        <span class="text-6xl md:text-7xl font-bebas text-[#7B3FF2] block stat-number" data-target="20">0</span>
+                        <span class="text-lg text-gray-400">YEARS+</span>
+                    </div>
+                    <div class="text-center anim-child">
+                        <span class="text-6xl md:text-7xl font-bebas text-[#7B3FF2] block stat-number" data-target="1000">0</span>
+                        <span class="text-lg text-gray-400">EVENTS+</span>
+                    </div>
+                    <div class="text-center anim-child">
+                        <span class="text-6xl md:text-7xl font-bebas text-[#7B3FF2] block stat-number" data-target="12">0</span>
+                        <span class="text-lg text-gray-400">ENGINEERS</span>
+                    </div>
+                    <div class="text-center anim-child">
+                        <span class="text-6xl md:text-7xl font-bebas text-[#7B3FF2] block stat-number" data-target="0">0</span>
+                        <span class="text-lg text-gray-400">DRAMA</span>
+                    </div>
+                    <div class="text-center anim-child">
+                        <span class="text-6xl md:text-7xl font-bebas text-[#7B3FF2] block stat-number" data-target="500">0</span>
+                        <span class="text-lg text-gray-400">HAPPY CLIENTS+</span>
+                    </div>
+                     <div class="text-center anim-child">
+                        <span class="text-6xl md:text-7xl font-bebas text-[#7B3FF2] block">24/7</span>
+                        <span class="text-lg text-gray-400">EMERGENCY SUPPORT</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- What Sets Us Apart Section -->
+        <section class="py-20 md:py-28 bg-white section-anim">
+            <div class="container mx-auto px-6 space-y-16">
+                <h2 class="text-4xl md:text-5xl font-bebas text-center mb-12 anim-child">THE SOUNDGUY DIFFERENCE</h2>
+                <!-- Difference 1 -->
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="anim-child">
+                        <h3 class="font-bebas text-3xl mb-4">MUSICIAN'S PERSPECTIVE</h3>
+                        <p class="text-gray-600">We've been on both sides of the board. We understand what performers need to feel confident and sound great. That empathy makes all the difference.</p>
+                    </div>
+                    <div class="anim-child flex justify-center">
+                        <img src="https://placehold.co/400x300/4B5563/F9FAFB?text=On+Stage" class="rounded-lg shadow-lg w-full max-w-md">
+                    </div>
+                </div>
+                <!-- Difference 2 -->
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="md:order-2 anim-child">
+                        <h3 class="font-bebas text-3xl mb-4">VENUE PARTNERSHIP</h3>
+                        <p class="text-gray-600">We treat your space with respect, work well with your staff, and always leave it better than we found it. Venues love working with us.</p>
+                    </div>
+                    <div class="md:order-1 anim-child flex justify-center">
+                         <img src="https://placehold.co/400x300/10B981/F9FAFB?text=Venue+Staff" class="rounded-lg shadow-lg w-full max-w-md">
+                    </div>
+                </div>
+                 <!-- Difference 3 -->
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="anim-child">
+                        <h3 class="font-bebas text-3xl mb-4">REAL RELIABILITY</h3>
+                        <p class="text-gray-600">When we say we'll be there at 2 PM, we're there at 1:45. When we quote a price, that's the price. No surprises, no excuses.</p>
+                    </div>
+                    <div class="anim-child flex justify-center">
+                        <img src="https://placehold.co/400x300/EF4444/F9FAFB?text=On+Time" class="rounded-lg shadow-lg w-full max-w-md">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="py-20 md:py-28 bg-gray-50 section-anim">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl md:text-5xl font-bebas text-center mb-12 anim-child">WHAT CLIENTS SAY</h2>
+                <div class="grid lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-lg shadow-md anim-child">
+                        <p class="text-gray-600 italic">"Soundguy Productions is the only team I trust. They are professional, reliable, and make every show sound absolutely incredible. A true partner."</p>
+                        <p class="font-bold text-right mt-4">- Jane D., Portland Music Festival</p>
+                    </div>
+                     <div class="bg-white p-8 rounded-lg shadow-md anim-child">
+                        <p class="text-gray-600 italic">"Rich and his team are the calm in the storm of event production. No matter what happens, they handle it with a smile and make sure the sound is flawless."</p>
+                        <p class="font-bold text-right mt-4">- Mark S., Revolution Hall</p>
+                    </div>
+                     <div class="bg-white p-8 rounded-lg shadow-md anim-child">
+                        <p class="text-gray-600 italic">"As a performer, working with a sound engineer who is also a musician is a game-changer. They just *get it*. Highly recommend."</p>
+                        <p class="font-bold text-right mt-4">- Emily R., Local Artist</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="contact" class="bg-gradient-to-r from-[#7B3FF2] to-purple-800 text-white py-20 md:py-28 section-anim">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-5xl font-bebas mb-4 anim-child">LET'S WORK TOGETHER</h2>
+                <p class="max-w-2xl mx-auto text-purple-200 mb-8 anim-child">Ready to experience the difference professional, drama-free sound can make for your event?</p>
+                <div class="space-y-4 sm:space-y-0 sm:space-x-4 anim-child">
+                     <a href="#" class="inline-block bg-white text-[#7B3FF2] text-xl font-bebas tracking-wider px-12 py-4 rounded-md hover:bg-gray-200 transition-all duration-300 transform hover:scale-105">REQUEST A QUOTE</a>
+                     <a href="services.html" class="inline-block border-2 border-white text-white text-xl font-bebas tracking-wider px-12 py-4 rounded-md hover:bg-white hover:text-[#7B3FF2] transition-all duration-300">VIEW OUR SERVICES</a>
+                </div>
+                <p class="mt-8 text-purple-200 anim-child">Want to talk first? Call (503) 555-0101 or email contact@soundguy.pro</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#1F2937] text-gray-400 py-16">
+        <div class="container mx-auto px-6">
+             <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="text-2xl font-bebas text-white mb-4">SOUNDGUY PRODUCTIONS</h4>
+                    <p class="text-sm">Professional sound production serving Portland Metro since 2004.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bebas text-white mb-4">Services</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="services.html#package-small" class="hover:text-white">Small Venues</a></li>
+                        <li><a href="services.html#package-club" class="hover:text-white">Concerts & Festivals</a></li>
+                        <li><a href="services.html" class="hover:text-white">Corporate Events</a></li>
+                        <li><a href="tel:503-555-0199" class="hover:text-white">Emergency Support</a></li>
+                    </ul>
+                </div>
+                 <div>
+                    <h4 class="text-lg font-bebas text-white mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-white">Home</a></li>
+                        <li><a href="services.html" class="hover:text-white">Services</a></li>
+                        <li><a href="about.html" class="hover:text-white">About Us</a></li>
+                        <li><a href="#contact" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bebas text-white mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="tel:503-555-0101" class="hover:text-white">(503) 555-0101</a></li>
+                        <li><a href="mailto:contact@soundguy.pro" class="hover:text-white">contact@soundguy.pro</a></li>
+                        <li class="text-red-400"><a href="tel:503-555-0199" class="hover:text-white">(503) 555-0199 (Emergency)</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-sm text-center md:text-left md:flex justify-between items-center">
+                <p>&copy; 2024 Soundguy Productions | Privacy | Terms</p>
+                <p class="mt-4 md:mt-0">Site by a cool developer</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // --- PRELOADER ---
+        const preloader = document.getElementById('preloader');
+        window.onload = () => {
+            preloader.classList.add('hidden');
+            document.body.classList.add('loaded');
+            
+            // --- HERO ANIMATION ---
+            gsap.from(".hero-anim", {
+                duration: 1,
+                y: 50,
+                opacity: 0,
+                stagger: 0.2,
+                ease: "power3.out",
+                delay: 0.2
+            });
+        };
+
+        // --- GENERAL SETUP ---
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // --- SCROLL ANIMATIONS ---
+        const sections = document.querySelectorAll('.section-anim');
+        sections.forEach(section => {
+            const children = section.querySelectorAll('.anim-child');
+            gsap.from(children, {
+                y: 50,
+                opacity: 0,
+                duration: 0.8,
+                ease: 'power3.out',
+                stagger: 0.15,
+                scrollTrigger: {
+                    trigger: section,
+                    start: 'top 85%',
+                    toggleActions: 'play none none none',
+                }
+            });
+        });
+        
+        // --- STATS COUNTER ---
+        const statNumbers = document.querySelectorAll('.stat-number');
+        statNumbers.forEach(number => {
+            const target = +number.getAttribute('data-target');
+            const stat = { val: 0 };
+            gsap.to(stat, {
+                val: target,
+                duration: 2.5,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: number,
+                    start: 'top 85%',
+                    toggleActions: 'play none none none',
+                },
+                onUpdate: () => {
+                    number.innerText = Math.ceil(stat.val).toLocaleString();
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>
+
