@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Soundguy Productions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        body {
+            background-color: #F9FAFB; /* Default light background for this page */
+            color: #1F2937;
+            font-family: 'Roboto', sans-serif;
+            opacity: 0; /* Initially hide body */
+            transition: opacity 0.5s ease-in;
+        }
+        body.loaded {
+            opacity: 1;
+        }
+        .font-bebas {
+            font-family: 'Bebas Neue', sans-serif;
+            letter-spacing: 0.05em;
+        }
+        .nav-scrolled {
+            background-color: rgba(31, 41, 55, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #4B5563;
+        }
+        /* Preloader Styles */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #1F2937;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: opacity 0.75s ease, visibility 0.75s ease;
+        }
+        #preloader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        .loader-text {
+            color: #F9FAFB;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2rem;
+            letter-spacing: 0.2em;
+            opacity: 0;
+            animation: fadeInOut 2.5s infinite;
+        }
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1F2937 0%, #7B3FF2 100%);
+            position: relative;
+        }
+        .hero-gradient::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='20' viewBox='0 0 100 20'%3E%3Cpath d='M0 10 C 25 20, 75 0, 100 10' stroke='%23FFFFFF' stroke-width='1' fill='none'/%3E%3C/svg%3E");
+            background-size: 50px 10px;
+            opacity: 0.1;
+            z-index: 1;
+        }
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        details summary .arrow {
+            transition: transform 0.3s ease;
+        }
+        details[open] summary .arrow {
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-text">SOUNDGUY</div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 nav-scrolled">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bebas tracking-wider text-white">SOUNDGUY</a>
+            <div class="hidden md:flex items-center space-x-8 text-white">
+                <a href="index.html" class="hover:text-[#7B3FF2] transition-colors duration-300">HOME</a>
+                <a href="services.html" class="text-[#7B3FF2] font-bold">SERVICES</a>
+                <a href="#about" class="hover:text-[#7B3FF2] transition-colors duration-300">ABOUT</a>
+                <a href="#contact" class="hover:text-[#7B3FF2] transition-colors duration-300">CONTACT</a>
+                <a href="#contact" class="bg-[#7B3FF2] text-white px-6 py-2 rounded-md hover:bg-opacity-80 transition-all duration-300 transform hover:scale-105">Request Quote</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 bg-opacity-95 text-white">
+            <a href="index.html" class="block text-center py-4 hover:bg-[#7B3FF2]">HOME</a>
+            <a href="services.html" class="block text-center py-4 bg-gray-700 text-[#7B3FF2] font-bold">SERVICES</a>
+            <a href="#about" class="block text-center py-4 hover:bg-[#7B3FF2]">ABOUT</a>
+            <a href="#contact" class="block text-center py-4 hover:bg-[#7B3FF2]">CONTACT</a>
+            <a href="#contact" class="block text-center py-4 bg-[#7B3FF2] font-bold">REQUEST QUOTE</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-gradient text-white pt-32 pb-20">
+            <div class="container mx-auto px-6 text-center relative z-10">
+                <h1 class="text-5xl md:text-7xl font-bebas mb-4 hero-anim">PROFESSIONAL SOUND FOR EVERY EVENT SIZE</h1>
+                <p class="text-lg md:text-xl text-purple-200 mb-8 hero-anim">From intimate venues to festival stages, we scale to your needs</p>
+                <div class="space-x-2 md:space-x-4 hero-anim">
+                    <a href="#package-small" class="bg-white/20 text-white px-4 py-2 md:px-6 md:py-3 rounded-md text-sm md:text-base hover:bg-white/30 transition-all duration-300">SMALL VENUES</a>
+                    <a href="#package-club" class="bg-white/20 text-white px-4 py-2 md:px-6 md:py-3 rounded-md text-sm md:text-base hover:bg-white/30 transition-all duration-300">CLUBS & THEATERS</a>
+                    <a href="#package-large" class="bg-white/20 text-white px-4 py-2 md:px-6 md:py-3 rounded-md text-sm md:text-base hover:bg-white/30 transition-all duration-300">LARGE EVENTS</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Packages Section -->
+        <section class="py-20 md:py-28 bg-white">
+            <div class="container mx-auto px-6 space-y-16 md:space-y-24">
+                
+                <!-- Package 1: Small Venues -->
+                <article id="package-small" class="section-anim grid md:grid-cols-2 gap-8 md:gap-12 items-center overflow-hidden">
+                    <div class="anim-child">
+                        <img src="https://placehold.co/600x400/4B5563/F9FAFB?text=Cozy+Venue" class="rounded-lg shadow-xl w-full" alt="Cozy venue with a small PA setup">
+                    </div>
+                    <div class="anim-child border-l-4 border-[#7B3FF2] pl-8">
+                        <h2 class="text-3xl md:text-4xl font-bebas">Coffee Shop & Small Venues</h2>
+                        <p class="text-[#7B3FF2] font-bold my-2">Perfect for 50-150 guests</p>
+                        <p class="text-gray-600 mb-6">Create an intimate, professional atmosphere where every word and note carries perfectly.</p>
+                        <div class="grid sm:grid-cols-2 gap-6 text-sm">
+                            <div>
+                                <h4 class="font-bold mb-2 text-gray-800">IDEAL FOR:</h4>
+                                <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                    <li>Acoustic performances</li>
+                                    <li>Small band setups</li>
+                                    <li>Poetry readings</li>
+                                    <li>Private parties</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-2 text-gray-800">WHAT'S INCLUDED:</h4>
+                                <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                    <li>High-quality PA system</li>
+                                    <li>Microphones & DI boxes</li>
+                                    <li>Experienced sound engineer</li>
+                                    <li>Setup and teardown</li>
+                                </ul>
+                            </div>
+                        </div>
+                         <a href="#contact" class="mt-8 inline-block bg-[#7B3FF2] text-white text-base font-bebas tracking-wider px-10 py-3 rounded-md hover:bg-opacity-80 transition-all duration-300">Request Quote</a>
+                    </div>
+                </article>
+
+                <!-- Package 2: Club & Theater -->
+                <article id="package-club" class="section-anim grid md:grid-cols-2 gap-8 md:gap-12 items-center overflow-hidden">
+                    <div class="md:order-2 anim-child">
+                        <img src="https://placehold.co/600x400/7B3FF2/FFFFFF?text=Full+Production" class="rounded-lg shadow-xl w-full" alt="Mid-size venue with full stage production">
+                    </div>
+                    <div class="md:order-1 anim-child border-l-4 border-[#7B3FF2] pl-8">
+                        <span class="bg-purple-200 text-[#7B3FF2] text-xs font-bold px-3 py-1 rounded-full">MOST POPULAR</span>
+                        <h2 class="text-3xl md:text-4xl font-bebas mt-2">Club & Theater Shows</h2>
+                        <p class="text-[#7B3FF2] font-bold my-2">Designed for 150-500 guests</p>
+                        <p class="text-gray-600 mb-6">Full production support for venues that demand professional quality and crystal-clear sound.</p>
+                         <div class="grid sm:grid-cols-2 gap-6 text-sm">
+                            <div>
+                                <h4 class="font-bold mb-2 text-gray-800">IDEAL FOR:</h4>
+                                <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                    <li>Live band performances</li>
+                                    <li>Theater productions</li>
+                                    <li>Corporate presentations</li>
+                                    <li>Comedy shows</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-2 text-gray-800">WHAT'S INCLUDED:</h4>
+                                <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                    <li>Full-range speaker systems</li>
+                                    <li>Stage monitoring</li>
+                                    <li>Digital mixing console</li>
+                                    <li>Lighting coordination</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="#contact" class="mt-8 inline-block bg-[#7B3FF2] text-white text-base font-bebas tracking-wider px-10 py-3 rounded-md hover:bg-opacity-80 transition-all duration-300">Request Quote</a>
+                    </div>
+                </article>
+
+                <!-- Package 3: Large Events -->
+                <article id="package-large" class="section-anim grid md:grid-cols-2 gap-8 md:gap-12 items-center overflow-hidden">
+                    <div class="anim-child">
+                         <img src="https://placehold.co/600x400/10B981/FFFFFF?text=Festival+Stage" class="rounded-lg shadow-xl w-full" alt="Outdoor festival stage with line array speakers">
+                    </div>
+                    <div class="anim-child border-l-4 border-[#7B3FF2] pl-8">
+                        <h2 class="text-3xl md:text-4xl font-bebas">Festivals & Large Events</h2>
+                        <p class="text-[#7B3FF2] font-bold my-2">Built for 500-2,500+ guests</p>
+                        <p class="text-gray-600 mb-6">Concert-quality production for outdoor festivals, summer series, and major municipal events.</p>
+                         <div class="grid sm:grid-cols-2 gap-6 text-sm">
+                            <div>
+                                <h4 class="font-bold mb-2 text-gray-800">IDEAL FOR:</h4>
+                                <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                    <li>Summer concert series</li>
+                                    <li>Community festivals</li>
+                                    <li>Multi-stage productions</li>
+                                    <li>Corporate gatherings</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-2 text-gray-800">WHAT'S INCLUDED:</h4>
+                                <ul class="list-disc list-inside text-gray-600 space-y-1">
+                                    <li>Line array speaker systems</li>
+                                    <li>Multi-engineer team</li>
+                                    <li>Power distribution</li>
+                                    <li>Rain-ready equipment</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="#contact" class="mt-8 inline-block bg-[#7B3FF2] text-white text-base font-bebas tracking-wider px-10 py-3 rounded-md hover:bg-opacity-80 transition-all duration-300">Request Quote</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Additional Services Section -->
+        <section class="py-20 md:py-28 bg-gray-50 section-anim">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-5xl font-bebas mb-12 anim-child">Additional Services</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service Item -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm text-left anim-child">
+                        <h3 class="font-bebas text-2xl mb-2">Corporate Events</h3>
+                        <p class="text-gray-600 text-sm mb-4">Professional audio for presentations, conferences, and company gatherings. Clear speech reinforcement and recording.</p>
+                        <a href="#" class="font-bold text-[#7B3FF2] hover:text-purple-800 text-sm group">Learn more <span class="group-hover:ml-1 transition-all">→</span></a>
+                    </div>
+                    <!-- Service Item -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm text-left anim-child">
+                        <h3 class="font-bebas text-2xl mb-2">Multi-Day Festivals</h3>
+                        <p class="text-gray-600 text-sm mb-4">Complete festival infrastructure rental, with or without our world-class engineering team.</p>
+                        <a href="#" class="font-bold text-[#7B3FF2] hover:text-purple-800 text-sm group">Learn more <span class="group-hover:ml-1 transition-all">→</span></a>
+                    </div>
+                     <!-- Service Item -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm text-left anim-child border-2 border-red-500">
+                        <h3 class="font-bebas text-2xl mb-2 text-red-600">Emergency Support</h3>
+                        <p class="text-gray-600 text-sm mb-4">Last-minute cancellation? We have backup equipment and on-call engineers to save the day.</p>
+                        <a href="tel:503-555-0199" class="font-bold text-red-600 hover:text-red-800 text-sm group">Call emergency line <span class="group-hover:ml-1 transition-all">→</span></a>
+                    </div>
+                     <!-- Service Item -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm text-left anim-child">
+                        <h3 class="font-bebas text-2xl mb-2">Recording Services</h3>
+                        <p class="text-gray-600 text-sm mb-4">Multi-track recording of your event, delivered professionally in your preferred format.</p>
+                        <a href="#" class="font-bold text-[#7B3FF2] hover:text-purple-800 text-sm group">Learn more <span class="group-hover:ml-1 transition-all">→</span></a>
+                    </div>
+                     <!-- Service Item -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm text-left anim-child">
+                        <h3 class="font-bebas text-2xl mb-2">Equipment Rental</h3>
+                        <p class="text-gray-600 text-sm mb-4">Dry rental of our full inventory is available for qualified clients with insurance.</p>
+                        <a href="#" class="font-bold text-[#7B3FF2] hover:text-purple-800 text-sm group">View inventory <span class="group-hover:ml-1 transition-all">→</span></a>
+                    </div>
+                     <!-- Service Item -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm text-left anim-child">
+                        <h3 class="font-bebas text-2xl mb-2">Consultation</h3>
+                        <p class="text-gray-600 text-sm mb-4">Not sure what you need? We'll visit your venue and provide a detailed audio recommendation.</p>
+                        <a href="#" class="font-bold text-[#7B3FF2] hover:text-purple-800 text-sm group">Schedule consultation <span class="group-hover:ml-1 transition-all">→</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Equipment Standards Section -->
+        <section class="bg-[#1F2937] text-white py-20 md:py-28 section-anim">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-5xl font-bebas mb-4 anim-child">PROFESSIONAL GRADE, ALWAYS</h2>
+                <p class="max-w-3xl mx-auto text-gray-400 mb-12 anim-child">We invest in quality equipment and maintain it to touring standards. No duct tape solutions or "making do" with inadequate gear. Your event deserves the best.</p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 text-gray-300 anim-child">
+                    <div class="text-center space-y-2">
+                        <div class="flex items-center justify-center h-16 w-16 mx-auto bg-gray-700 rounded-full text-2xl text-[#7B3FF2]">✓</div>
+                        <span>QSC & JBL</span>
+                    </div>
+                    <div class="text-center space-y-2">
+                         <div class="flex items-center justify-center h-16 w-16 mx-auto bg-gray-700 rounded-full text-2xl text-[#7B3FF2]">✓</div>
+                        <span>Allen & Heath</span>
+                    </div>
+                    <div class="text-center space-y-2">
+                        <div class="flex items-center justify-center h-16 w-16 mx-auto bg-gray-700 rounded-full text-2xl text-[#7B3FF2]">✓</div>
+                        <span>Shure</span>
+                    </div>
+                     <div class="text-center space-y-2">
+                        <div class="flex items-center justify-center h-16 w-16 mx-auto bg-gray-700 rounded-full text-2xl text-[#7B3FF2]">✓</div>
+                        <span>Sennheiser</span>
+                    </div>
+                    <div class="text-center space-y-2">
+                        <div class="flex items-center justify-center h-16 w-16 mx-auto bg-gray-700 rounded-full text-2xl text-[#7B3FF2]">✓</div>
+                        <span>Maintained Cables</span>
+                    </div>
+                    <div class="text-center space-y-2">
+                        <div class="flex items-center justify-center h-16 w-16 mx-auto bg-gray-700 rounded-full text-2xl text-[#7B3FF2]">✓</div>
+                        <span>Backup Gear</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Preview Section -->
+        <section class="py-20 md:py-28 bg-white section-anim">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <h2 class="text-4xl md:text-5xl font-bebas text-center mb-12 anim-child">Common Questions</h2>
+                <div class="space-y-4 anim-child">
+                    <!-- FAQ Item -->
+                    <details class="bg-gray-50 p-4 rounded-lg cursor-pointer">
+                        <summary class="flex justify-between items-center font-bold">
+                            How far in advance should I book?
+                            <span class="arrow transition-transform duration-300">▶</span>
+                        </summary>
+                        <p class="mt-4 text-gray-600 text-sm leading-relaxed">For best availability, we recommend booking 2-3 months in advance, especially for weekend dates. For large festivals, 6-12 months is ideal. However, don't hesitate to reach out for last-minute needs – we may have availability!</p>
+                    </details>
+                    <!-- FAQ Item -->
+                    <details class="bg-gray-50 p-4 rounded-lg cursor-pointer">
+                        <summary class="flex justify-between items-center font-bold">
+                            Do you provide lighting too?
+                             <span class="arrow transition-transform duration-300">▶</span>
+                        </summary>
+                        <p class="mt-4 text-gray-600 text-sm leading-relaxed">While our primary focus is audio, we offer lighting coordination as part of our Club and Festival packages. We work with trusted local lighting professionals to provide a seamless production experience.</p>
+                    </details>
+                     <!-- FAQ Item -->
+                    <details class="bg-gray-50 p-4 rounded-lg cursor-pointer">
+                        <summary class="flex justify-between items-center font-bold">
+                            Can you work with our venue's sound restrictions?
+                             <span class="arrow transition-transform duration-300">▶</span>
+                        </summary>
+                        <p class="mt-4 text-gray-600 text-sm leading-relaxed">Absolutely. We are experienced in working within noise ordinances and venue-specific SPL (Sound Pressure Level) limits. We use advanced tools to monitor levels and ensure compliance while still delivering a great-sounding show.</p>
+                    </details>
+                     <!-- FAQ Item -->
+                    <details class="bg-gray-50 p-4 rounded-lg cursor-pointer">
+                        <summary class="flex justify-between items-center font-bold">
+                            What if we need to cancel?
+                             <span class="arrow transition-transform duration-300">▶</span>
+                        </summary>
+                        <p class="mt-4 text-gray-600 text-sm leading-relaxed">Our cancellation policy will be clearly outlined in your agreement. Generally, the initial deposit is non-refundable, but we offer flexibility for rescheduling based on availability.</p>
+                    </details>
+                     <!-- FAQ Item -->
+                    <details class="bg-gray-50 p-4 rounded-lg cursor-pointer">
+                        <summary class="flex justify-between items-center font-bold">
+                            Do you have insurance?
+                             <span class="arrow transition-transform duration-300">▶</span>
+                        </summary>
+                        <p class="mt-4 text-gray-600 text-sm leading-relaxed">Yes, Soundguy Productions carries comprehensive liability insurance. We can provide a certificate of insurance (COI) to your venue upon request.</p>
+                    </details>
+                </div>
+                <div class="text-center mt-8 anim-child">
+                    <a href="#" class="font-bold text-[#7B3FF2] hover:text-purple-800 group">See all FAQs <span class="group-hover:ml-1 transition-all">→</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom CTA Section -->
+        <section id="contact-cta" class="bg-gradient-to-r from-[#7B3FF2] to-purple-800 text-white py-20 md:py-28 section-anim">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-5xl font-bebas mb-4 anim-child">READY TO MAKE YOUR EVENT SOUND AMAZING?</h2>
+                <p class="max-w-2xl mx-auto text-purple-200 mb-8 anim-child">Every event is unique. Tell us about yours and we'll create a custom solution that fits your needs and budget.</p>
+                <a href="#" class="inline-block bg-white text-[#7B3FF2] text-xl font-bebas tracking-wider px-12 py-4 rounded-md hover:bg-gray-200 transition-all duration-300 transform hover:scale-105 anim-child">REQUEST A QUOTE</a>
+                <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto text-purple-200 text-sm anim-child">
+                    <span>✓ Response within 24 hours</span>
+                    <span>✓ Clear, detailed quotes</span>
+                    <span>✓ No hidden fees</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#1F2937] text-gray-400 py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h4 class="text-2xl font-bebas text-white mb-4">SOUNDGUY</h4>
+                    <p class="text-sm">Professional sound production serving Portland Metro since 2004.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bebas text-white mb-4">Services</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#package-small" class="hover:text-white">Small Venues</a></li>
+                        <li><a href="#package-club" class="hover:text-white">Concerts & Festivals</a></li>
+                        <li><a href="#" class="hover:text-white">Corporate Events</a></li>
+                        <li><a href="tel:503-555-0199" class="hover:text-white">Emergency Support</a></li>
+                    </ul>
+                </div>
+                 <div>
+                    <h4 class="text-lg font-bebas text-white mb-4">Service Area</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>Portland • Gresham • Salem</li>
+                        <li>Beaverton • Lake Oswego</li>
+                        <li>And surrounding areas</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bebas text-white mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="tel:503-555-0101" class="hover:text-white">(503) 555-0101</a></li>
+                        <li><a href="mailto:contact@soundguy.pro" class="hover:text-white">contact@soundguy.pro</a></li>
+                        <li class="text-red-400"><a href="tel:503-555-0199" class="hover:text-white">(503) 555-0199 (Emergency)</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-sm text-center md:text-left md:flex justify-between items-center">
+                <p>&copy; 2024 Soundguy Productions | Privacy | Terms</p>
+                <p class="mt-4 md:mt-0">Site by a cool developer</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // --- PRELOADER ---
+        const preloader = document.getElementById('preloader');
+        window.onload = () => {
+            preloader.classList.add('hidden');
+            document.body.classList.add('loaded');
+            
+            // --- HERO ANIMATION ---
+            gsap.from(".hero-anim", {
+                duration: 1,
+                y: 50,
+                opacity: 0,
+                stagger: 0.2,
+                ease: "power3.out",
+                delay: 0.2
+            });
+        };
+
+        // --- GENERAL SETUP ---
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // --- SCROLL ANIMATIONS ---
+        const sections = document.querySelectorAll('.section-anim');
+        sections.forEach(section => {
+            const children = section.querySelectorAll('.anim-child');
+            gsap.from(children, {
+                y: 50,
+                opacity: 0,
+                duration: 0.8,
+                ease: 'power3.out',
+                stagger: 0.15,
+                scrollTrigger: {
+                    trigger: section,
+                    start: 'top 85%',
+                    toggleActions: 'play none none none',
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>
