@@ -81,7 +81,7 @@
     <!-- Header & Navigation -->
     <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 nav-scrolled">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html"><img src="images/sgp-logo.png" alt="Soundguy Productions" class="h-12"></a>
+            <a href="index.html"><img src="images/sgp-logo.png" alt="Soundguy Productions" class="h-36"></a>
             <div class="hidden md:flex items-center space-x-8 text-white">
                 <a href="index.html" class="hover:text-[#7B3FF2] transition-colors duration-300">HOME</a>
                 <a href="services.html" class="hover:text-[#7B3FF2] transition-colors duration-300">SERVICES</a>
@@ -371,6 +371,71 @@
         const datePicker = document.getElementById('event-date');
         const today = new Date().toISOString().split('T')[0];
         datePicker.setAttribute('min', today);
+
+        // --- FORM SUBMISSION TO AUTO LEAD INTAKE ---
+        const quoteForm = document.getElementById('quoteForm');
+        quoteForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value.trim(),
+                email: document.getElementById('email').value.trim(),
+                phone: document.getElementById('phone').value.trim(),
+                event_date: document.getElementById('event-date').value,
+                event_type: document.getElementById('event-type').value,
+                venue: document.getElementById('venue').value.trim(),
+                guest_count: document.getElementById('attendance').value,
+                message: document.getElementById('description').value.trim()
+            };
+
+            // Basic validation
+            if (!formData.name || !formData.email || !formData.event_date || !formData.event_type || !formData.venue) {
+                alert('Please fill in all required fields (marked with *)');
+                return;
+            }
+
+            // Show loading state
+            const submitBtn = quoteForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'Sending...';
+
+            try {
+                // Submit to Auto Lead Intake system
+                const response = await fetch('http://5.78.156.118:5003/api/lead', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    // Success! Show confirmation
+                    alert('✅ Thank you! Your quote request has been received.\n\nWe\'ll respond within 24 hours (usually much sooner).\n\nPriority Score: ' + result.priority_score + '/10');
+
+                    // Reset form
+                    quoteForm.reset();
+
+                    // Optional: Redirect to thank you page
+                    // window.location.href = 'thank-you.html';
+                } else {
+                    // Show validation errors
+                    const errors = result.errors ? result.errors.join('\n') : 'Please check your form and try again.';
+                    alert('❌ Oops! There were some issues:\n\n' + errors);
+                }
+            } catch (error) {
+                console.error('Form submission error:', error);
+                alert('❌ Sorry, there was a problem submitting your request.\n\nPlease try again or call us at 503-998-5420.');
+            } finally {
+                // Restore button
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+            }
+        });
     });
     </script>
 </body>
