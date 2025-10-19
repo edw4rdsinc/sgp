@@ -1,10 +1,139 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <script defer data-domain="prosoundguy.com" src="http://5.78.156.118:8001/js/script.js"></script>
+    <!-- Privacy-friendly analytics by Plausible -->
+    <script async src="https://plausible.io/js/pa-hBIrHgD_FnvR0ESIqDTIT.js"></script>
+    <script>
+      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+      plausible.init()
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soundguy Productions - Professional Sound for Pacific Northwest Events</title>
+    <title>Professional Sound Production Portland, Seattle | Soundguy Productions</title>
+    <meta name="description" content="Professional sound production for events in Portland, Seattle, and the Pacific Northwest. Concert sound, festivals, and corporate events. 20 years experience serving Oregon and Washington.">
+    <meta name="keywords" content="sound production Portland, sound engineer Seattle, event audio Portland OR, concert sound Seattle WA, festival sound Pacific Northwest, professional PA rental Portland, sound system Seattle">
+    <link rel="canonical" href="https://www.prosoundguy.com/">
+
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="US-OR">
+    <meta name="geo.region" content="US-WA">
+    <meta name="geo.placename" content="Portland">
+    <meta name="geo.placename" content="Seattle">
+    <meta name="geo.position" content="45.5152;-122.6784">
+    <meta name="ICBM" content="45.5152, -122.6784">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Professional Sound Production Portland, Seattle | Soundguy Productions">
+    <meta property="og:description" content="Professional sound production for events in Portland, Seattle, and the Pacific Northwest. 20 years experience, 1000+ events.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.prosoundguy.com/">
+    <meta property="og:image" content="https://www.prosoundguy.com/images/sgp-logo.png">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Professional Sound Production Portland, Seattle">
+    <meta name="twitter:description" content="Professional sound production for events in Portland, Seattle, and the Pacific Northwest. 20 years experience.">
+    <meta name="twitter:image" content="https://www.prosoundguy.com/images/sgp-logo.png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://www.prosoundguy.com",
+      "name": "Soundguy Productions",
+      "image": "https://www.prosoundguy.com/images/sgp-logo.png",
+      "description": "Professional sound production for events in Portland, Seattle, and the Pacific Northwest since 2004",
+      "url": "https://www.prosoundguy.com",
+      "telephone": "+15039985420",
+      "email": "rich@prosoundguy.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "PO Box 642",
+        "addressLocality": "Gresham",
+        "addressRegion": "OR",
+        "postalCode": "97030",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "45.5152",
+        "longitude": "-122.6784"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Portland",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "OR"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Seattle",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "WA"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Gresham",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "OR"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Salem",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "OR"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Beaverton",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "OR"
+          }
+        },
+        {
+          "@type": "City",
+          "name": "Lake Oswego",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "OR"
+          }
+        },
+        {
+          "@type": "State",
+          "name": "Oregon"
+        },
+        {
+          "@type": "State",
+          "name": "Washington"
+        }
+      ],
+      "priceRange": "$$",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "09:00",
+        "closes": "21:00"
+      },
+      "sameAs": [
+        "https://www.prosoundguy.com"
+      ],
+      "foundingDate": "2004",
+      "slogan": "Every performer deserves to feel like a rockstar, and every audience deserves to hear them clearly"
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -124,7 +253,10 @@
     <main class="relative z-10">
         <!-- Section 1: Hero -->
         <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
-            <video autoplay loop muted playsinline class="absolute z-0 w-full h-full object-cover">
+            <!-- Mobile fallback image -->
+            <div class="absolute z-0 w-full h-full bg-cover bg-center md:hidden" style="background-image: url('images/concert-mixing-board.png');"></div>
+            <!-- Desktop video -->
+            <video autoplay loop muted playsinline class="hidden md:block absolute z-0 w-full h-full object-cover">
                 <source src="images/hero-image-soundboard.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -535,6 +667,46 @@
         window.addEventListener('resize', () => {
             setCanvasSize();
             initParticles();
+        });
+
+        // --- PLAUSIBLE ANALYTICS TRACKING ---
+
+        // Track phone number clicks
+        document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+            link.addEventListener('click', function() {
+                const phoneNumber = this.getAttribute('href').replace('tel:', '');
+                plausible('Phone Call', {
+                    props: {
+                        number: phoneNumber,
+                        page: window.location.pathname
+                    }
+                });
+            });
+        });
+
+        // Track "Request Quote" button clicks
+        document.querySelectorAll('a[href*="contact.html"]').forEach(link => {
+            if (link.textContent.includes('QUOTE') || link.textContent.includes('Quote')) {
+                link.addEventListener('click', function() {
+                    plausible('Request Quote Click', {
+                        props: {
+                            location: this.closest('section')?.id || 'unknown',
+                            page: window.location.pathname
+                        }
+                    });
+                });
+            }
+        });
+
+        // Track "View Services" clicks
+        document.querySelectorAll('a[href*="services.html"]').forEach(link => {
+            link.addEventListener('click', function() {
+                plausible('View Services Click', {
+                    props: {
+                        page: window.location.pathname
+                    }
+                });
+            });
         });
     });
     </script>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery - All 1094 Photos</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: Arial, sans-serif;
+            background: #1a1a1a;
+            color: white;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #7B3FF2;
+        }
+        .info {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ccc;
+        }
+        .controls {
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 20px;
+            background: #2a2a2a;
+            border-radius: 8px;
+        }
+        .controls input, .controls select {
+            padding: 8px;
+            margin: 5px;
+            border-radius: 4px;
+            border: 1px solid #444;
+            background: #333;
+            color: white;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            padding: 20px 0;
+        }
+        .photo-card {
+            background: #2a2a2a;
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.2s;
+            position: relative;
+        }
+        .photo-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(123, 63, 242, 0.5);
+        }
+        .photo-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .photo-info {
+            padding: 10px;
+            font-size: 11px;
+        }
+        .photo-number {
+            color: #7B3FF2;
+            font-weight: bold;
+        }
+        .photo-filename {
+            color: #aaa;
+            margin-top: 5px;
+            word-break: break-all;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 1000;
+            padding: 20px;
+        }
+        .modal.active { display: flex; align-items: center; justify-content: center; }
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
+        }
+        .selected {
+            border: 3px solid #7B3FF2;
+        }
+        .selection-panel {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #2a2a2a;
+            padding: 15px;
+            display: none;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.5);
+        }
+        .selection-panel.active { display: block; }
+        .selected-count {
+            color: #7B3FF2;
+            font-weight: bold;
+            margin-right: 20px;
+        }
+        .copy-btn {
+            background: #7B3FF2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .copy-btn:hover { background: #6a32d9; }
+    </style>
+</head>
+<body>
+    <h1>SGP Photo Gallery - All 1,094 Photos</h1>
+    <p class="info">Click any photo to view full size. Use search to filter by filename.</p>
+
+    <div class="controls">
+        <input type="text" id="search" placeholder="Search by filename..." style="width: 300px">
+        <select id="sort">
+            <option value="index">Sort by Index</option>
+            <option value="name">Sort by Name</option>
+        </select>
+        <button class="copy-btn" onclick="copySelected()">Copy Selected Filenames</button>
+    </div>
+
+    <div class="selection-panel" id="selectionPanel">
+        <span class="selected-count" id="selectedCount">0 selected</span>
+        <button class="copy-btn" onclick="copySelected()">Copy Selected Filenames</button>
+        <button class="copy-btn" onclick="clearSelected()" style="background: #666;">Clear Selection</button>
+    </div>
+
+    <div class="gallery" id="gallery"></div>
+
+    <div class="modal" id="modal" onclick="closeModal()">
+        <span class="modal-close">&times;</span>
+        <img id="modalImg" src="" alt="">
+    </div>
+
+    <script>
+        const photos = [];
+        // Generate photo list from preview files
+        for (let i = 0; i < 1094; i++) {
+            photos.push({
+                index: i,
+                preview: `preview_${String(i).padStart(4, '0')}`,
+                path: `/tmp/sgp_photo_previews/preview_${String(i).padStart(4, '0')}_`
+            });
+        }
+
+        let selectedPhotos = new Set();
+
+        function renderGallery(filter = '', sortBy = 'index') {
+            const gallery = document.getElementById('gallery');
+            gallery.innerHTML = '';
+
+            let filteredPhotos = photos;
+            if (filter) {
+                filteredPhotos = photos.filter(p =>
+                    p.preview.toLowerCase().includes(filter.toLowerCase())
+                );
+            }
+
+            filteredPhotos.forEach(photo => {
+                const card = document.createElement('div');
+                card.className = 'photo-card';
+                if (selectedPhotos.has(photo.index)) {
+                    card.classList.add('selected');
+                }
+
+                card.innerHTML = `
+                    <img src="/tmp/sgp_photo_previews/${photo.preview}.jpg"
+                         alt="Photo ${photo.index}"
+                         onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\\'http://www.w3.org/2000/svg\\' width=\\'250\\' height=\\'200\\'%3E%3Crect fill=\\'%23333\\' width=\\'250\\' height=\\'200\\'/%3E%3Ctext x=\\'50%25\\' y=\\'50%25\\' fill=\\'%23666\\' text-anchor=\\'middle\\' dy=\\'.3em\\'%3ENo Preview%3C/text%3E%3C/svg%3E'">
+                    <div class="photo-info">
+                        <div class="photo-number">#${photo.index}</div>
+                        <div class="photo-filename">${photo.preview}</div>
+                    </div>
+                `;
+
+                card.onclick = (e) => {
+                    if (e.ctrlKey || e.metaKey) {
+                        toggleSelection(photo.index, card);
+                    } else {
+                        openModal(`/tmp/sgp_photo_previews/${photo.preview}.jpg`);
+                    }
+                };
+
+                gallery.appendChild(card);
+            });
+        }
+
+        function toggleSelection(index, card) {
+            if (selectedPhotos.has(index)) {
+                selectedPhotos.delete(index);
+                card.classList.remove('selected');
+            } else {
+                selectedPhotos.add(index);
+                card.classList.add('selected');
+            }
+            updateSelectionPanel();
+        }
+
+        function updateSelectionPanel() {
+            const panel = document.getElementById('selectionPanel');
+            const count = document.getElementById('selectedCount');
+            count.textContent = `${selectedPhotos.size} selected`;
+
+            if (selectedPhotos.size > 0) {
+                panel.classList.add('active');
+            } else {
+                panel.classList.remove('active');
+            }
+        }
+
+        function copySelected() {
+            const indices = Array.from(selectedPhotos).sort((a,b) => a-b);
+            const text = indices.join(', ');
+            navigator.clipboard.writeText(text).then(() => {
+                alert(`Copied ${indices.length} photo indices to clipboard!`);
+            });
+        }
+
+        function clearSelected() {
+            selectedPhotos.clear();
+            document.querySelectorAll('.photo-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            updateSelectionPanel();
+        }
+
+        function openModal(src) {
+            document.getElementById('modalImg').src = src;
+            document.getElementById('modal').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.remove('active');
+        }
+
+        document.getElementById('search').addEventListener('input', (e) => {
+            renderGallery(e.target.value);
+        });
+
+        document.getElementById('sort').addEventListener('change', (e) => {
+            const filter = document.getElementById('search').value;
+            renderGallery(filter, e.target.value);
+        });
+
+        // Initial render
+        renderGallery();
+    </script>
+</body>
+</html>

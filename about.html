@@ -1,10 +1,37 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <script defer data-domain="prosoundguy.com" src="http://5.78.156.118:8001/js/script.js"></script>
+    <!-- Privacy-friendly analytics by Plausible -->
+    <script async src="https://plausible.io/js/pa-hBIrHgD_FnvR0ESIqDTIT.js"></script>
+    <script>
+      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+      plausible.init()
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Soundguy Productions</title>
+    <title>About Us - Professional Sound Engineers Portland Seattle | 20 Years Experience</title>
+    <meta name="description" content="Meet the team behind Portland & Seattle's trusted sound production company. 20 years serving the Pacific Northwest, 1000+ events. Musician-founded, drama-free professional audio.">
+    <meta name="keywords" content="sound engineer Portland, audio professional Seattle, event production Oregon, live sound Washington, Pacific Northwest audio engineer">
+    <link rel="canonical" href="https://www.prosoundguy.com/about.html">
+
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="US-OR">
+    <meta name="geo.region" content="US-WA">
+    <meta name="geo.placename" content="Portland">
+    <meta name="geo.placename" content="Seattle">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="About Us - Professional Sound Engineers Portland Seattle">
+    <meta property="og:description" content="20 years serving the Pacific Northwest. Musician-founded, drama-free professional audio for Portland & Seattle events.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.prosoundguy.com/about.html">
+    <meta property="og:image" content="https://www.prosoundguy.com/images/sgp-logo.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Us - Professional Sound Engineers Portland Seattle">
+    <meta name="twitter:description" content="20 years serving the Pacific Northwest. Musician-founded, drama-free professional audio.">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -198,7 +225,7 @@
                         <p class="text-gray-600">We've been on both sides of the board. We understand what performers need to feel confident and sound great. That empathy makes all the difference.</p>
                     </div>
                     <div class="anim-child flex justify-center">
-                        <img src="https://placehold.co/400x300/4B5563/F9FAFB?text=On+Stage" class="rounded-lg shadow-lg w-full max-w-md">
+                        <img src="images/on-stage-musician.jpg" class="rounded-lg shadow-lg w-full max-w-md">
                     </div>
                 </div>
                 <!-- Difference 2 -->
@@ -208,7 +235,7 @@
                         <p class="text-gray-600">We treat your space with respect, work well with your staff, and always leave it better than we found it. Venues love working with us.</p>
                     </div>
                     <div class="md:order-1 anim-child flex justify-center">
-                         <img src="https://placehold.co/400x300/10B981/F9FAFB?text=Venue+Staff" class="rounded-lg shadow-lg w-full max-w-md">
+                         <img src="images/venue-partnership.jpg" class="rounded-lg shadow-lg w-full max-w-md">
                     </div>
                 </div>
                  <!-- Difference 3 -->
@@ -218,7 +245,7 @@
                         <p class="text-gray-600">When we say we'll be there at 2 PM, we're there at 1:45. When we quote a price, that's the price. No surprises, no excuses.</p>
                     </div>
                     <div class="anim-child flex justify-center">
-                        <img src="https://placehold.co/400x300/EF4444/F9FAFB?text=On+Time" class="rounded-lg shadow-lg w-full max-w-md">
+                        <img src="images/reliability-setup.jpg" class="rounded-lg shadow-lg w-full max-w-md">
                     </div>
                 </div>
             </div>
@@ -373,6 +400,45 @@
                     number.innerText = Math.ceil(stat.val).toLocaleString();
                 }
             });
+        });
+
+        // --- PLAUSIBLE ANALYTICS TRACKING ---
+
+        // Track phone number clicks
+        document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+            link.addEventListener('click', function() {
+                const phoneNumber = this.getAttribute('href').replace('tel:', '');
+                plausible('Phone Call', {
+                    props: {
+                        number: phoneNumber,
+                        page: window.location.pathname
+                    }
+                });
+            });
+        });
+
+        // Track email clicks
+        document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+            link.addEventListener('click', function() {
+                plausible('Email Click', {
+                    props: {
+                        page: window.location.pathname
+                    }
+                });
+            });
+        });
+
+        // Track CTA buttons
+        document.querySelectorAll('a[href*="contact"]').forEach(link => {
+            if (link.textContent.includes('QUOTE') || link.textContent.includes('Quote')) {
+                link.addEventListener('click', function() {
+                    plausible('Request Quote Click', {
+                        props: {
+                            page: window.location.pathname
+                        }
+                    });
+                });
+            }
         });
     });
     </script>

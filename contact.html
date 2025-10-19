@@ -1,10 +1,37 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <script defer data-domain="prosoundguy.com" src="http://5.78.156.118:8001/js/script.js"></script>
+    <!-- Privacy-friendly analytics by Plausible -->
+    <script async src="https://plausible.io/js/pa-hBIrHgD_FnvR0ESIqDTIT.js"></script>
+    <script>
+      window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+      plausible.init()
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Soundguy Productions</title>
+    <title>Contact Us - Get Quote Portland Seattle Sound Production | (503) 998-5420</title>
+    <meta name="description" content="Request a quote for professional sound production in Portland, Seattle, and Pacific Northwest. Fast response, clear pricing. Serving Oregon & Washington events. Call (503) 998-5420.">
+    <meta name="keywords" content="sound production quote Portland, event audio quote Seattle, PA rental Portland OR, sound engineer contact Seattle WA, Pacific Northwest sound services">
+    <link rel="canonical" href="https://www.prosoundguy.com/contact.html">
+
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="US-OR">
+    <meta name="geo.region" content="US-WA">
+    <meta name="geo.placename" content="Portland">
+    <meta name="geo.placename" content="Seattle">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact Us - Get Quote Portland Seattle Sound Production">
+    <meta property="og:description" content="Request a quote for professional sound production in Portland, Seattle, and Pacific Northwest. Fast response, clear pricing.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.prosoundguy.com/contact.html">
+    <meta property="og:image" content="https://www.prosoundguy.com/images/sgp-logo.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Us - Get Quote Portland Seattle Sound Production">
+    <meta name="twitter:description" content="Request a quote for professional sound production in Portland, Seattle, and Pacific Northwest.">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -401,8 +428,17 @@
             submitBtn.disabled = true;
             submitBtn.innerHTML = 'Sending...';
 
+            // Track form submission attempt
+            plausible('Form Submission Started', {
+                props: {
+                    event_type: formData.event_type,
+                    guest_count: formData.guest_count
+                }
+            });
+
             try {
                 // Submit to Auto Lead Intake system
+                // TODO: Update this URL to production API endpoint
                 const response = await fetch('http://5.78.156.118:5003/api/lead', {
                     method: 'POST',
                     headers: {
@@ -414,6 +450,15 @@
                 const result = await response.json();
 
                 if (result.success) {
+                    // Track successful form submission
+                    plausible('Form Submission Success', {
+                        props: {
+                            event_type: formData.event_type,
+                            guest_count: formData.guest_count,
+                            priority_score: result.priority_score
+                        }
+                    });
+
                     // Success! Show confirmation
                     alert('✅ Thank you! Your quote request has been received.\n\nWe\'ll respond within 24 hours (usually much sooner).\n\nPriority Score: ' + result.priority_score + '/10');
 
@@ -435,6 +480,33 @@
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = originalText;
             }
+        });
+
+        // --- PLAUSIBLE ANALYTICS TRACKING ---
+
+        // Track phone number clicks
+        document.querySelectorAll('a[href^="tel:"]').forEach(link => {
+            link.addEventListener('click', function() {
+                const phoneNumber = this.getAttribute('href').replace('tel:', '');
+                plausible('Phone Call', {
+                    props: {
+                        number: phoneNumber,
+                        page: window.location.pathname,
+                        location: 'contact-page'
+                    }
+                });
+            });
+        });
+
+        // Track email clicks
+        document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+            link.addEventListener('click', function() {
+                plausible('Email Click', {
+                    props: {
+                        page: window.location.pathname
+                    }
+                });
+            });
         });
     });
     </script>

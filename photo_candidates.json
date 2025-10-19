@@ -1,0 +1,749 @@
+{
+  "sampling_step": 10,
+  "total_sampled": 109,
+  "categories": {
+    "hero_background": [
+      {
+        "index": 270,
+        "preview": "preview_0270_FB_IMG_1547583786206.jpg",
+        "source": "FB_IMG_1547583786206.jpg",
+        "aspect": 2.47,
+        "orientation": "landscape"
+      },
+      {
+        "index": 280,
+        "preview": "preview_0280_FB_IMG_1571276263176-1.jpg",
+        "source": "FB_IMG_1571276263176-1.jpg",
+        "aspect": 1.67,
+        "orientation": "landscape"
+      },
+      {
+        "index": 290,
+        "preview": "preview_0290_FB_IMG_1722012897427.jpg",
+        "source": "FB_IMG_1722012897427.jpg",
+        "aspect": 2.22,
+        "orientation": "landscape"
+      },
+      {
+        "index": 310,
+        "preview": "preview_0310_IMAG0441.jpg",
+        "source": "IMAG0441.jpg",
+        "aspect": 1.67,
+        "orientation": "landscape"
+      },
+      {
+        "index": 320,
+        "preview": "preview_0320_IMAG0612.jpg",
+        "source": "IMAG0612.jpg",
+        "aspect": 1.67,
+        "orientation": "landscape"
+      },
+      {
+        "index": 480,
+        "preview": "preview_0480_IMG_20210724_194238479.jpg",
+        "source": "IMG_20210724_194238479.jpg",
+        "aspect": 2.22,
+        "orientation": "landscape"
+      },
+      {
+        "index": 490,
+        "preview": "preview_0490_IMG_20210724_225824513.jpg",
+        "source": "IMG_20210724_225824513.jpg",
+        "aspect": 2.22,
+        "orientation": "landscape"
+      },
+      {
+        "index": 510,
+        "preview": "preview_0510_IMG_20211009_210541735.jpg",
+        "source": "IMG_20211009_210541735.jpg",
+        "aspect": 2.22,
+        "orientation": "landscape"
+      },
+      {
+        "index": 520,
+        "preview": "preview_0520_IMG_20220604_201109627.jpg",
+        "source": "IMG_20220604_201109627.jpg",
+        "aspect": 2.22,
+        "orientation": "landscape"
+      },
+      {
+        "index": 530,
+        "preview": "preview_0530_IMG_20230127_210239243.jpg",
+        "source": "IMG_20230127_210239243.jpg",
+        "aspect": 2.22,
+        "orientation": "landscape"
+      },
+      {
+        "index": 540,
+        "preview": "preview_0540_IMG_20230127_222401689.jpg",
+        "source": "IMG_20230127_222401689.jpg",
+        "aspect": 2.22,
+        "orientation": "landscape"
+      },
+      {
+        "index": 550,
+        "preview": "preview_0550_IMG_20230128_003528860.jpg",
+        "source": "IMG_20230128_003528860.jpg",
+        "aspect": 2.22,
+        "orientation": "landscape"
+      },
+      {
+        "index": 560,
+        "preview": "preview_0560_IMG_20230505_184723853.jpg",
+        "source": "IMG_20230505_184723853.jpg",
+        "aspect": 2.22,
+        "orientation": "landscape"
+      },
+      {
+        "index": 570,
+        "preview": "preview_0570_IMG_20230527_235640508.jpg",
+        "source": "IMG_20230527_235640508.jpg",
+        "aspect": 2.22,
+        "orientation": "landscape"
+      },
+      {
+        "index": 580,
+        "preview": "preview_0580_IMG_20230608_174425745.jpg",
+        "source": "IMG_20230608_174425745.jpg",
+        "aspect": 2.22,
+        "orientation": "landscape"
+      },
+      {
+        "index": 590,
+        "preview": "preview_0590_IMG_20230617_214041039.jpg",
+        "source": "IMG_20230617_214041039.jpg",
+        "aspect": 2.22,
+        "orientation": "landscape"
+      },
+      {
+        "index": 600,
+        "preview": "preview_0600_IMG_20230727_192521371.jpg",
+        "source": "IMG_20230727_192521371.jpg",
+        "aspect": 2.22,
+        "orientation": "landscape"
+      },
+      {
+        "index": 610,
+        "preview": "preview_0610_IMG_20230821_175846619.jpg",
+        "source": "IMG_20230821_175846619.jpg",
+        "aspect": 2.22,
+        "orientation": "landscape"
+      },
+      {
+        "index": 620,
+        "preview": "preview_0620_IMG_20230821_181124148.jpg",
+        "source": "IMG_20230821_181124148.jpg",
+        "aspect": 2.22,
+        "orientation": "landscape"
+      },
+      {
+        "index": 630,
+        "preview": "preview_0630_IMG_20231021_185654701.jpg",
+        "source": "IMG_20231021_185654701.jpg",
+        "aspect": 2.22,
+        "orientation": "landscape"
+      }
+    ],
+    "console_engineer": [],
+    "on_stage_performer": [
+      {
+        "index": 0,
+        "preview": "preview_0000_07bde9e3-edde-46a2-b60d-e41924321d0d.jpg",
+        "source": "07bde9e3-edde-46a2-b60d-e41924321d0d.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 10,
+        "preview": "preview_0010_20180714_211959.jpg",
+        "source": "20180714_211959.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 20,
+        "preview": "preview_0020_20180714_223219.jpg",
+        "source": "20180714_223219.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 30,
+        "preview": "preview_0030_20180720_205509.jpg",
+        "source": "20180720_205509.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 40,
+        "preview": "preview_0040_20180721_221826.jpg",
+        "source": "20180721_221826.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 50,
+        "preview": "preview_0050_20180823_192641.jpg",
+        "source": "20180823_192641.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 60,
+        "preview": "preview_0060_20180929_161232.jpg",
+        "source": "20180929_161232.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 70,
+        "preview": "preview_0070_20180929_211810.jpg",
+        "source": "20180929_211810.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 80,
+        "preview": "preview_0080_20181013_155616.jpg",
+        "source": "20181013_155616.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 90,
+        "preview": "preview_0090_20181028_172014.jpg",
+        "source": "20181028_172014.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 100,
+        "preview": "preview_0100_20181221_235051.jpg",
+        "source": "20181221_235051.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 110,
+        "preview": "preview_0110_20190216_151343.jpg",
+        "source": "20190216_151343.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 120,
+        "preview": "preview_0120_20190313_164008.jpg",
+        "source": "20190313_164008.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 130,
+        "preview": "preview_0130_20190406_203337.jpg",
+        "source": "20190406_203337.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 140,
+        "preview": "preview_0140_20190423_173507.jpg",
+        "source": "20190423_173507.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 150,
+        "preview": "preview_0150_20190511_201251.jpg",
+        "source": "20190511_201251.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 160,
+        "preview": "preview_0160_20190801_225105.jpg",
+        "source": "20190801_225105.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 170,
+        "preview": "preview_0170_20190803_204632.jpg",
+        "source": "20190803_204632.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 180,
+        "preview": "preview_0180_20190921_183007.jpg",
+        "source": "20190921_183007.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 190,
+        "preview": "preview_0190_20191116_194842.jpg",
+        "source": "20191116_194842.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      }
+    ],
+    "venue_staff": [],
+    "reliability_setup": [],
+    "engineer_at_work": [
+      {
+        "index": 330,
+        "preview": "preview_0330_IMG_20170121_193050.jpg",
+        "source": "IMG_20170121_193050.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 340,
+        "preview": "preview_0340_IMG_20170318_164553.jpg",
+        "source": "IMG_20170318_164553.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 350,
+        "preview": "preview_0350_IMG_20170730_190821.jpg",
+        "source": "IMG_20170730_190821.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 360,
+        "preview": "preview_0360_IMG_20170903_195326.jpg",
+        "source": "IMG_20170903_195326.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 370,
+        "preview": "preview_0370_IMG_20171216_222104.jpg",
+        "source": "IMG_20171216_222104.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 380,
+        "preview": "preview_0380_IMG_20180126_170812.jpg",
+        "source": "IMG_20180126_170812.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 390,
+        "preview": "preview_0390_IMG_20180224_170323.jpg",
+        "source": "IMG_20180224_170323.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 400,
+        "preview": "preview_0400_IMG_20180302_180743.jpg",
+        "source": "IMG_20180302_180743.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 410,
+        "preview": "preview_0410_IMG_20180303_165102.jpg",
+        "source": "IMG_20180303_165102.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 420,
+        "preview": "preview_0420_IMG_20180310_170115.jpg",
+        "source": "IMG_20180310_170115.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 430,
+        "preview": "preview_0430_IMG_20180317_193800.jpg",
+        "source": "IMG_20180317_193800.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 440,
+        "preview": "preview_0440_IMG_20180414_164159.jpg",
+        "source": "IMG_20180414_164159.jpg",
+        "aspect": 0.67,
+        "orientation": "portrait"
+      },
+      {
+        "index": 450,
+        "preview": "preview_0450_IMG_20180512_215834.jpg",
+        "source": "IMG_20180512_215834.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 460,
+        "preview": "preview_0460_IMG_20180523_063100.jpg",
+        "source": "IMG_20180523_063100.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 470,
+        "preview": "preview_0470_IMG_20180615_135718.jpg",
+        "source": "IMG_20180615_135718.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 480,
+        "preview": "preview_0480_IMG_20210724_194238479.jpg",
+        "source": "IMG_20210724_194238479.jpg",
+        "aspect": 2.22,
+        "orientation": "landscape"
+      },
+      {
+        "index": 490,
+        "preview": "preview_0490_IMG_20210724_225824513.jpg",
+        "source": "IMG_20210724_225824513.jpg",
+        "aspect": 2.22,
+        "orientation": "landscape"
+      },
+      {
+        "index": 500,
+        "preview": "preview_0500_IMG_20210801_204514576_HDR~2.jpg",
+        "source": "IMG_20210801_204514576_HDR~2.jpg",
+        "aspect": 0.47,
+        "orientation": "portrait"
+      },
+      {
+        "index": 510,
+        "preview": "preview_0510_IMG_20211009_210541735.jpg",
+        "source": "IMG_20211009_210541735.jpg",
+        "aspect": 2.22,
+        "orientation": "landscape"
+      },
+      {
+        "index": 520,
+        "preview": "preview_0520_IMG_20220604_201109627.jpg",
+        "source": "IMG_20220604_201109627.jpg",
+        "aspect": 2.22,
+        "orientation": "landscape"
+      }
+    ],
+    "cozy_venue": [
+      {
+        "index": 330,
+        "preview": "preview_0330_IMG_20170121_193050.jpg",
+        "source": "IMG_20170121_193050.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 340,
+        "preview": "preview_0340_IMG_20170318_164553.jpg",
+        "source": "IMG_20170318_164553.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 350,
+        "preview": "preview_0350_IMG_20170730_190821.jpg",
+        "source": "IMG_20170730_190821.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 360,
+        "preview": "preview_0360_IMG_20170903_195326.jpg",
+        "source": "IMG_20170903_195326.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 370,
+        "preview": "preview_0370_IMG_20171216_222104.jpg",
+        "source": "IMG_20171216_222104.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 380,
+        "preview": "preview_0380_IMG_20180126_170812.jpg",
+        "source": "IMG_20180126_170812.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 390,
+        "preview": "preview_0390_IMG_20180224_170323.jpg",
+        "source": "IMG_20180224_170323.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 400,
+        "preview": "preview_0400_IMG_20180302_180743.jpg",
+        "source": "IMG_20180302_180743.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 410,
+        "preview": "preview_0410_IMG_20180303_165102.jpg",
+        "source": "IMG_20180303_165102.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 420,
+        "preview": "preview_0420_IMG_20180310_170115.jpg",
+        "source": "IMG_20180310_170115.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 430,
+        "preview": "preview_0430_IMG_20180317_193800.jpg",
+        "source": "IMG_20180317_193800.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 440,
+        "preview": "preview_0440_IMG_20180414_164159.jpg",
+        "source": "IMG_20180414_164159.jpg",
+        "aspect": 0.67,
+        "orientation": "portrait"
+      },
+      {
+        "index": 450,
+        "preview": "preview_0450_IMG_20180512_215834.jpg",
+        "source": "IMG_20180512_215834.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 460,
+        "preview": "preview_0460_IMG_20180523_063100.jpg",
+        "source": "IMG_20180523_063100.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 470,
+        "preview": "preview_0470_IMG_20180615_135718.jpg",
+        "source": "IMG_20180615_135718.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 480,
+        "preview": "preview_0480_IMG_20210724_194238479.jpg",
+        "source": "IMG_20210724_194238479.jpg",
+        "aspect": 2.22,
+        "orientation": "landscape"
+      },
+      {
+        "index": 490,
+        "preview": "preview_0490_IMG_20210724_225824513.jpg",
+        "source": "IMG_20210724_225824513.jpg",
+        "aspect": 2.22,
+        "orientation": "landscape"
+      },
+      {
+        "index": 500,
+        "preview": "preview_0500_IMG_20210801_204514576_HDR~2.jpg",
+        "source": "IMG_20210801_204514576_HDR~2.jpg",
+        "aspect": 0.47,
+        "orientation": "portrait"
+      },
+      {
+        "index": 510,
+        "preview": "preview_0510_IMG_20211009_210541735.jpg",
+        "source": "IMG_20211009_210541735.jpg",
+        "aspect": 2.22,
+        "orientation": "landscape"
+      },
+      {
+        "index": 520,
+        "preview": "preview_0520_IMG_20220604_201109627.jpg",
+        "source": "IMG_20220604_201109627.jpg",
+        "aspect": 2.22,
+        "orientation": "landscape"
+      }
+    ],
+    "full_production": [
+      {
+        "index": 0,
+        "preview": "preview_0000_07bde9e3-edde-46a2-b60d-e41924321d0d.jpg",
+        "source": "07bde9e3-edde-46a2-b60d-e41924321d0d.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 10,
+        "preview": "preview_0010_20180714_211959.jpg",
+        "source": "20180714_211959.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 20,
+        "preview": "preview_0020_20180714_223219.jpg",
+        "source": "20180714_223219.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 30,
+        "preview": "preview_0030_20180720_205509.jpg",
+        "source": "20180720_205509.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 40,
+        "preview": "preview_0040_20180721_221826.jpg",
+        "source": "20180721_221826.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 50,
+        "preview": "preview_0050_20180823_192641.jpg",
+        "source": "20180823_192641.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 60,
+        "preview": "preview_0060_20180929_161232.jpg",
+        "source": "20180929_161232.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 70,
+        "preview": "preview_0070_20180929_211810.jpg",
+        "source": "20180929_211810.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 80,
+        "preview": "preview_0080_20181013_155616.jpg",
+        "source": "20181013_155616.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 90,
+        "preview": "preview_0090_20181028_172014.jpg",
+        "source": "20181028_172014.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 100,
+        "preview": "preview_0100_20181221_235051.jpg",
+        "source": "20181221_235051.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 110,
+        "preview": "preview_0110_20190216_151343.jpg",
+        "source": "20190216_151343.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 120,
+        "preview": "preview_0120_20190313_164008.jpg",
+        "source": "20190313_164008.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 130,
+        "preview": "preview_0130_20190406_203337.jpg",
+        "source": "20190406_203337.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 140,
+        "preview": "preview_0140_20190423_173507.jpg",
+        "source": "20190423_173507.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 150,
+        "preview": "preview_0150_20190511_201251.jpg",
+        "source": "20190511_201251.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 160,
+        "preview": "preview_0160_20190801_225105.jpg",
+        "source": "20190801_225105.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 170,
+        "preview": "preview_0170_20190803_204632.jpg",
+        "source": "20190803_204632.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 180,
+        "preview": "preview_0180_20190921_183007.jpg",
+        "source": "20190921_183007.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 190,
+        "preview": "preview_0190_20191116_194842.jpg",
+        "source": "20191116_194842.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      }
+    ],
+    "festival_stage": [
+      {
+        "index": 30,
+        "preview": "preview_0030_20180720_205509.jpg",
+        "source": "20180720_205509.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 40,
+        "preview": "preview_0040_20180721_221826.jpg",
+        "source": "20180721_221826.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 160,
+        "preview": "preview_0160_20190801_225105.jpg",
+        "source": "20190801_225105.jpg",
+        "aspect": 1.33,
+        "orientation": "landscape"
+      },
+      {
+        "index": 500,
+        "preview": "preview_0500_IMG_20210801_204514576_HDR~2.jpg",
+        "source": "IMG_20210801_204514576_HDR~2.jpg",
+        "aspect": 0.47,
+        "orientation": "portrait"
+      }
+    ]
+  }
+}
