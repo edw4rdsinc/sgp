@@ -88,7 +88,9 @@
             50% { opacity: 1; }
         }
         .hero-gradient {
-            background: linear-gradient(135deg, #1F2937 0%, #7B3FF2 100%);
+            background-image: url('images/services-hero.jpg');
+            background-size: cover;
+            background-position: center;
             position: relative;
         }
         .hero-gradient::before {
@@ -98,9 +100,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='20' viewBox='0 0 100 20'%3E%3Cpath d='M0 10 C 25 20, 75 0, 100 10' stroke='%23FFFFFF' stroke-width='1' fill='none'/%3E%3C/svg%3E");
-            background-size: 50px 10px;
-            opacity: 0.1;
+            background: linear-gradient(135deg, rgba(31, 41, 55, 0.8) 0%, rgba(123, 63, 242, 0.7) 100%);
             z-index: 1;
         }
         details > summary {
@@ -153,7 +153,7 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="hero-gradient text-white pt-48 pb-20">
+        <section class="hero-gradient text-white pt-64 pb-20">
             <div class="container mx-auto px-6 text-center relative z-10">
                 <h1 class="text-5xl md:text-7xl font-bebas mb-4 hero-anim">PROFESSIONAL SOUND FOR EVERY EVENT SIZE</h1>
                 <p class="text-lg md:text-xl text-purple-200 mb-8 hero-anim">From intimate venues to festival stages, we scale to your needs</p>
