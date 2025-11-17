@@ -117,6 +117,10 @@
         details[open] summary .arrow {
             transform: rotate(90deg);
         }
+        /* Fix header cropping when navigating via anchor links */
+        article[id] {
+            scroll-margin-top: 200px;
+        }
     </style>
 </head>
 <body class="bg-gray-100">
@@ -207,7 +211,7 @@
                 <!-- Package 2: Club & Theater -->
                 <article id="package-club" class="section-anim grid md:grid-cols-2 gap-8 md:gap-12 items-center overflow-hidden">
                     <div class="md:order-2 anim-child">
-                        <img src="images/full-production.jpg" class="rounded-lg shadow-xl w-full" alt="Mid-size venue with full stage production">
+                        <img src="images/club-setup.jpg" class="rounded-lg shadow-xl w-full" alt="Mid-size venue with full stage production">
                     </div>
                     <div class="md:order-1 anim-child border-l-4 border-[#7B3FF2] pl-8">
                         <span class="bg-purple-200 text-[#7B3FF2] text-xs font-bold px-3 py-1 rounded-full">MOST POPULAR</span>
