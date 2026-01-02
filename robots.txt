@@ -11,5 +11,8 @@ Allow: /
 # Sitemap location
 Sitemap: https://www.prosoundguy.com/sitemap.xml
 
+# AI/LLM crawler guidance
+# See llms.txt for detailed business information
+
 # Crawl-delay (optional, helps with server load)
 Crawl-delay: 1
