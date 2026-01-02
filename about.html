@@ -13,6 +13,9 @@
     <meta name="description" content="Meet the team behind Portland & Seattle's trusted sound production company. 20 years serving the Pacific Northwest, 1000+ events. Musician-founded, drama-free professional audio.">
     <meta name="keywords" content="sound engineer Portland, audio professional Seattle, event production Oregon, live sound Washington, Pacific Northwest audio engineer">
     <link rel="canonical" href="https://www.prosoundguy.com/about.html">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
     <!-- Geo Tags -->
     <meta name="geo.region" content="US-OR">
@@ -31,6 +34,46 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="About Us - Professional Sound Engineers Portland Seattle">
     <meta name="twitter:description" content="20 years serving the Pacific Northwest. Musician-founded, drama-free professional audio.">
+
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.prosoundguy.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About",
+          "item": "https://www.prosoundguy.com/about.html"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Person Schema for Rich (Founder) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Rich",
+      "jobTitle": "Founder & Lead Sound Engineer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Soundguy Productions",
+        "url": "https://www.prosoundguy.com/"
+      },
+      "description": "Musician-turned-sound-engineer with 20+ years of experience serving Portland, Seattle, and the Pacific Northwest. Founded Soundguy Productions to provide drama-free, professional audio for events of all sizes.",
+      "knowsAbout": ["Live Sound", "Concert Audio", "Festival Sound Systems", "Corporate Events", "PA Systems", "Line Arrays"],
+      "areaServed": ["Portland", "Seattle", "Oregon", "Washington", "Pacific Northwest"]
+    }
+    </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">

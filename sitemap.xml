@@ -37,4 +37,12 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Photo Gallery -->
+  <url>
+    <loc>https://www.prosoundguy.com/photo-gallery.html</loc>
+    <lastmod>2026-01-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
 </urlset>
